@@ -4,10 +4,9 @@
       <TitleSection :title="Title" :subTitle="subTitle" />
       <div class="">
         <b-carousel
-          id="carousel-1"
+          id="carousel-2"
           v-model="slide"
-          :interval="1000"
-          fade="true"
+          :interval="3000"
           controls
           no-hover-pause="true"
         >
@@ -16,19 +15,20 @@
             :key="index"
             class="carousel_item"
           >
-            <div class="person_info">
-              <p>{{ person.name }}</p>
-              <p>{{ person.role }}</p>
-              <p>{{ person.description }}</p>
-            </div>
-            <div class="person_img">
-              <img
-                class="img-fluid image_item"
-                :src="person.url"
-                alt="image slot"
-                width="100"
-                height="200"
-              />
+            <div class="d-flex">
+              <div class="person_logo col-lg-1"></div>
+              <div class="person_info col-lg-5">
+                <p class="person_name">{{ person.name }}</p>
+                <p class="person_role">{{ person.role }}</p>
+                <p class="person_description">{{ person.description }}</p>
+              </div>
+              <div class="person_img col-lg-6">
+                <img
+                  class="img-fluid image_item"
+                  :src="person.url"
+                  alt="image slot"
+                />
+              </div>
             </div>
           </b-carousel-slide>
         </b-carousel>
@@ -56,16 +56,59 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  opacity: 1;
+  padding: 15px;
+  border-radius: 50%;
+  background: var(--main-color);
+  background-repeat: no-repeat;
+}
+.carousel-control-next-icon {
+  background-position: 55% 50%;
+  background-size: 12px 12px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-prev-icon {
+  background-position: 45% 50%;
+  background-size: 12px 12px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}
+
 .home_helper {
-  display: block;
+  margin-bottom: 45px;
 }
 .carousel_item {
   position: relative;
-  height: 300px;
+  height: 450px;
 }
-.person_img {
-  object-fit: contain;
+.person_logo {
+  background-image: url(https://cls.vn/Content/images/quote.svg);
+  background-repeat: no-repeat;
+  background-size: 64px 46px;
+}
+.person_info {
+  color: black;
+  text-align: left;
+  padding-top: 18px;
+}
+.person_name {
+  color: var(--text-color);
+  font-size: 18px;
+}
+.person_role {
+  color: var(--description-color);
+  font-size: 14px;
+}
+.person_description {
+  color: var(--description-color);
+  font-size: 14px;
 }
 .person_img::after {
   position: absolute;
@@ -81,10 +124,8 @@ export default {
   z-index: -1;
 }
 .image_item {
-  position: absolute;
-  right: 20%;
-  bottom: 0;
-  width: 120px;
-  height: 250px;
+  object-fit: contain;
+  width: 230px;
+  height: 400px;
 }
 </style>
