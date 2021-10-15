@@ -1,6 +1,6 @@
 <template>
   <b-container id="provide">
-    <b-nav tabs align="center mt-4">
+    <b-nav tabs align="center mt-5">
       <b-nav-item @click="activeMenu(active)" :active="active" class="nav_item">
         Giải pháp E-learninb
       </b-nav-item>
@@ -29,8 +29,8 @@
         <ProvideCard :cardData="card" />
       </div>
     </div>
-    <div class="text-center">
-      <a href="" class="btn btn-orange mb-3 button_view_all">Xem tất cả</a>
+    <div class="text-center mt-4 mb-4">
+      <a href="" class="btn btn-view-all">Xem tất cả</a>
     </div>
   </b-container>
 </template>
@@ -38,8 +38,8 @@
 <script>
 import { ProvideList } from "./data/provide_list";
 import { ProvideCards } from "./data/provide_cards";
-import ProvideItem from "./ProvideList/provide_item.vue";
-import ProvideCard from "./ProvideCards/provide_card.vue";
+import ProvideItem from "./provide_item.vue";
+import ProvideCard from "./provide_card.vue";
 export default {
   name: "Provide",
   data: function () {
@@ -64,22 +64,21 @@ export default {
 
 <style scoped>
 .nav_item {
-  color: #353535;
   border: 1px solid #c4c4c4;
   border-bottom: 0;
-  font-size: 20px;
+  font-size: var(--title-section);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .nav-tabs .nav-link {
   border: 0;
-  color: #353535;
+  color: var(--text-color);
 }
 .active {
   color: #0040a0;
   border: 1px solid #c4c4c4;
   border-bottom: 0;
-  font-size: 20px;
+  font-size: var(--title-section);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -94,9 +93,5 @@ export default {
 }
 .heading {
   font-size: 14px;
-}
-.button_view_all {
-  width: 130px;
-  border-radius: 20px;
 }
 </style>

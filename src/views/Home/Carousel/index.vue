@@ -5,6 +5,7 @@
       v-model="slide"
       :interval="2000"
       controls
+      no-hover-pause="true"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >

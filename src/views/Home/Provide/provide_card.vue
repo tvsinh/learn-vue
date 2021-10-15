@@ -19,11 +19,13 @@
 </template>
 
 <script>
-import "../../../../assets/css/base.css";
+import "../../../assets/css/base.css";
 
 export default {
   name: "ProvideCard",
-  props: ["cardData"],
+  props: {
+    cardData: Object,
+  },
 };
 </script>
 
@@ -50,8 +52,8 @@ export default {
   position: absolute;
   font-size: 40px;
   z-index: 10;
-  color: #fff;
-  top: 30%;
+  color: var(--white-color);
+  top: 32%;
   left: 50%;
   transform: translateX(-50%);
 }

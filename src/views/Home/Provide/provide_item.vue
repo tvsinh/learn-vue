@@ -18,11 +18,13 @@
 </template>
 
 <script>
-import "../../../../assets/css/base.css";
+import "../../../assets/css/base.css";
 
 export default {
   name: "ProvideItem",
-  props: ["listData"],
+  props: {
+    listData: Object,
+  },
   data() {
     return {
       show: false,

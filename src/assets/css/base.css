@@ -1,12 +1,15 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --text-color: #212529;
+  --text-color: #353535;
+  --description-color: #474c50;
   --main-color: #0040a0;
   --hover-color: #f37c21;
   --button-color: #f37c21;
   --border-color: #dbdbdb;
 
+  --title-section: 22px;
+  --subTitle-section: 14px;
 }
 
 .btn-outline-orange {
@@ -28,6 +31,21 @@
   font-size: 14px;
 }
 .btn-orange:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: var(--white-color);
+}
+.btn-view-all {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  color: var(--white-color);
+  margin-left: 5px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 130px;
+  border-radius: 20px;
+}
+.btn-view-all:hover {
   background-color: var(--main-color);
   border-color: var(--main-color);
   color: var(--white-color);
