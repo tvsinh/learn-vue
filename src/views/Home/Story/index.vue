@@ -119,16 +119,5 @@ export default {
   background: rgba(0, 0, 0, 0.1);
   height: 100%;
   width: 100%;
-  /* transition: all 0.4s ease-in-out; */
 }
-/* .item_img::after {
-  position: absolute;
-  content: "";
-  background: rgba(0, 0, 0, 0.05);
-  width: 100%;
-  height: 100%;
-  right: 0;
-  bottom: 0;
-  transition: all 0.4s ease-in-out;
-} */
 </style>

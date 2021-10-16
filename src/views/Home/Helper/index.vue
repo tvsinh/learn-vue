@@ -113,14 +113,13 @@ export default {
 .person_img::after {
   position: absolute;
   content: "";
+  width: 310px;
+  height: 310px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #e2eefa;
   border-radius: 50%;
-  text-align: center;
-  width: 310px;
-  height: 310px;
+  background: #e2eefa;
   z-index: -1;
 }
 .image_item {

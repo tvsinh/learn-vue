@@ -21,7 +21,16 @@
         <template #img>
           <img
             class="d-block img-fluid w-100"
-            src="	https://cls.vn/images/banners/2021/07/14/banner-web-bao-boi-330.jpg?w=1900"
+            src="https://cls.vn/images/banners/2021/07/14/banner-web-bao-boi-330.jpg?w=1900"
+            alt="image slot"
+          />
+        </template>
+      </b-carousel-slide>
+      <b-carousel-slide>
+        <template #img>
+          <img
+            class="d-block img-fluid w-100"
+            src="https://cls.vn/images/banners/2021/10/15/banner-web-thu-nho-1920x590-483.jpg?w=1900"
             alt="image slot"
           />
         </template>
