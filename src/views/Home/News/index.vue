@@ -123,9 +123,11 @@ export default {
 }
 .view_all {
   font-size: 16px;
+  cursor: pointer;
   color: var(--main-color);
 }
 .left_body {
+  cursor: pointer;
   position: relative;
 }
 .left_img {
@@ -176,6 +178,7 @@ span {
   margin-top: -1px;
   border: 1px solid #ccc;
   border-top: none;
+  padding-bottom: 5px;
 }
 .content_body {
   padding: 11px;

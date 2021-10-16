@@ -1,6 +1,6 @@
 <template>
   <div class="header_top">
-    <b-container class="p-0 d-flex justify-content-between">
+    <b-container class="d-flex justify-content-between">
       <div class="d-flex">
         <div class="d-flex info mr-2 header_phone">
           <b-icon icon="telephone" class="icon"></b-icon>

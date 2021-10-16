@@ -1,11 +1,13 @@
 <template>
-  <div class="header_body">
-    <b-container class="p-0 d-flex justify-content-between align-items-center">
+  <div class="header_body" :class="{ header_fixed: position }">
+    <b-container class="d-flex justify-content-between align-items-center">
       <div>
         <a href="/">
           <img
             src="https://cls.vn/images/configs/2021/07/14/logo-cls-072021-01-451.png"
             alt="logo"
+            class="header_img"
+            :class="{ img_fixed: position }"
         /></a>
       </div>
       <div>
@@ -21,7 +23,14 @@
 
           <li>SỐ HOÁ BÀI GIẢNG</li>
           <li>KHÁCH HÀNG</li>
-          <li class="drop_downs">TIN TỨC</li>
+          <li class="drop_downs">
+            TIN TỨC
+            <ul class="sub_menu">
+              <li class="sub_item">Bài viết E-learning</li>
+              <li class="sub_item">Báo chí nói gì về CLS</li>
+            </ul>
+          </li>
+
           <li>BÁO GIÁ</li>
         </ul>
       </div>
@@ -36,7 +45,29 @@
 <script>
 import "../../assets/css/base.css";
 
-export default {};
+export default {
+  name: "HeaderBody",
+  data: function () {
+    return {
+      position: false,
+    };
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 50) {
+        this.position = true;
+      } else {
+        this.position = false;
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -46,6 +77,16 @@ export default {};
   font-size: 12px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 5px;
   z-index: 1;
+}
+.header_fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.img_fixed {
+  width: 80px;
 }
 .menu {
   display: flex;
