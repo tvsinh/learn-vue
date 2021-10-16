@@ -40,7 +40,6 @@ export default {
   background-size: cover;
   width: 100%;
   margin-top: 0px;
-  margin-bottom: 100px;
   height: 490px;
 }
 .contact {

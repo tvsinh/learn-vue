@@ -76,9 +76,6 @@ export default {
 }
 .active {
   color: #0040a0;
-  border: 1px solid #c4c4c4;
-  border-bottom: 0;
-  font-size: var(--title-section);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
