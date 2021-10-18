@@ -1,7 +1,7 @@
 <template>
   <div class="header_body" :class="{ header_fixed: position }">
     <b-container class="d-flex justify-content-between align-items-center">
-      <div>
+      <div class="box_img">
         <a href="/">
           <img
             src="https://cls.vn/images/configs/2021/07/14/logo-cls-072021-01-451.png"
@@ -55,7 +55,7 @@ export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed() {
+  beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
@@ -77,6 +77,7 @@ export default {
   font-size: 12px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 5px;
   z-index: 1;
+  transition: all 0.3s;
 }
 .header_fixed {
   position: fixed;
@@ -84,7 +85,14 @@ export default {
   top: 0;
   z-index: 999;
 }
-
+.header_img {
+  width: 100%;
+  transition: all 0.3s;
+}
+.box_img {
+  flex-shrink: 0;
+  width: 115px;
+}
 .img_fixed {
   width: 80px;
 }
